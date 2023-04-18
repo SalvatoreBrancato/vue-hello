@@ -12,9 +12,11 @@
     <div id="app">
         <h1 v-bind:class="testoCentrato">{{saluto}} {{nome}} {{cognome}}</h1>
         <div v-bind:class="setInput">
-            <input type="text" placeholder="inserisci il tuo nome" v-model="nome">
-            <input type="text" placeholder="inserisci il tuo cognome" v-model="cognome">
+            <input type="text" placeholder="inserisci il tuo nome" v-model="nome" v-bind:class="margine">
+            <input type="text" placeholder="inserisci il tuo cognome" v-model="cognome" v-bind:class="margine">
+            <button @click="myfunction" type="button" class="btn btn-outline-primary" v-bind:class="margine">Cambia saluto</button>
         </div>
+        <img v-bind:src="image" v-bind:alt="alt">
     </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
